@@ -25,7 +25,10 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
 
 * **Microcontroller:** ESP32.
 * **Sensors:** Onboard MPU6050 IMU for 6-axis spatial tracking.
-* **Frame:** Custom symmetrical quadcopter frame modeled in SolidWorks and 3D printed.
+**Frame Design & Manufacturing**
+*(Below: The original CAD model showcasing the structural assembly, followed by the final 3D-printed physical frame.)*
+<img width="952" height="566" alt="image" src="https://github.com/user-attachments/assets/6e87f3b6-8fb6-4eca-8e27-060713a9e57b" />
+
 
 ## Software Stack
 * **Language:** Embedded C++.
