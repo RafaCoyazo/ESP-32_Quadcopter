@@ -17,6 +17,8 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
 * **Flight Controller Evolution:**
   * **Version 1:** Initial proof-of-concept testing was done using an Arduino and jumper wires.
   * **Version 3:** Upgraded to a custom double-layer PCB (View the [KiCad Project Files](./Version_3/KiCadV3)) to integrate the ESP32 and peripherals, eliminating fragile wiring and reducing electrical noise.
+  * <img width="780" height="595" alt="image" src="https://github.com/user-attachments/assets/aba6ac5e-01d4-4533-a27e-a9dbf1184d4b" />
+
 * **Microcontroller:** ESP32.
 * **Sensors:** Onboard MPU6050 IMU for 6-axis spatial tracking.
 * **Frame:** Custom symmetrical quadcopter frame modeled in SolidWorks and 3D printed.
