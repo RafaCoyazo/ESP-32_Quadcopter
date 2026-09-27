@@ -18,6 +18,8 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
   * **Version 1:** Initial proof-of-concept testing was done using an Arduino and jumper wires.
   * **Version 3:** Upgraded to a custom double-layer PCB (View the [KiCad Project Files](./Version_3/KiCadV3)) to integrate the ESP32 and peripherals, eliminating fragile wiring and reducing electrical noise.
   * <img width="780" height="595" alt="image" src="https://github.com/user-attachments/assets/aba6ac5e-01d4-4533-a27e-a9dbf1184d4b" />
+  <img width="488" height="682" alt="image" src="https://github.com/user-attachments/assets/547577a7-10a6-4643-bf57-f2cb0859f740" />
+
 
 * **Microcontroller:** ESP32.
 * **Sensors:** Onboard MPU6050 IMU for 6-axis spatial tracking.
