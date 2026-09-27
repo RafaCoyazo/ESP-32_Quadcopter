@@ -23,7 +23,7 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
   
 * **Flight Controller Evolution:**
   * **Version 1:** Initial proof-of-concept testing was done using an Arduino and jumper wires.
-  *  **Version 2:** Upgraded to a custom double-layer PCB (View the [KiCad Project Files](./Version_3/KiCadV3) to show proof of concept with Arduino Nano
+  *  **Version 2:** Upgraded to a custom double-layer PCB (View the [KiCad Project Files](./Version_3/KiCadV3)) to show proof of concept with Arduino Nano
   * **Version 3:** Redigned custom double-layer PCB (View the [KiCad Project Files](./Version_3/KiCadV3)) to integrate the ESP32 and peripherals, wiring and reduce electrical noise.
  * **Schematic Design**
 *(Below: The wiring schematic integrating the ESP32 microcontroller, MPU6050 IMU, and peripheral modules.)*
