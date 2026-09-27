@@ -13,10 +13,13 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
 * The isolated problem likely lies within the firmware's motor mixing logic, a bug in the PWM signal generation routed to the rear pins, or an uncompensated center of gravity on the 3D-printed frame.
 
 ## Hardware & Design
-* **Flight Controller:** Custom double-layer PCB routed in KiCad to integrate the microcontroller and peripherals.
+
+* **Flight Controller Evolution:**
+  * **Version 1:** Initial proof-of-concept testing was done using an Arduino and jumper wires.
+  * **Version 3:** Upgraded to a custom double-layer PCB (View the [KiCad Project Files](./Version_3/KiCadV3)) to integrate the ESP32 and peripherals, eliminating fragile wiring and reducing electrical noise.
 * **Microcontroller:** ESP32.
 * **Sensors:** Onboard MPU6050 IMU for 6-axis spatial tracking.
-* **Frame:** Custom symmetrical quadcopter frame modeled in CAD and 3D printed.
+* **Frame:** Custom symmetrical quadcopter frame modeled in SolidWorks and 3D printed.
 
 ## Software Stack
 * **Language:** Embedded C++.
