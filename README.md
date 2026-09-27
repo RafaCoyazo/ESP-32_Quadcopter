@@ -28,6 +28,7 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
 **Frame Design & Manufacturing**
 *(Below: The original CAD model showcasing the structural assembly, followed by the final 3D-printed physical frame.)*
 <img width="952" height="566" alt="image" src="https://github.com/user-attachments/assets/6e87f3b6-8fb6-4eca-8e27-060713a9e57b" />
+rplace with image]
 
 
 ## Software Stack
