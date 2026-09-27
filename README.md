@@ -14,6 +14,12 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
 
 ## Hardware & Design
 
+## Hardware Specifications
+
+| Component | Description |
+| :--- | :--- |
+| **Microcontroller Evolution** | **V1 & V2:** Arduino (View [Version 1 Details](./Version_1) and [Version 2 Details](./Version_2))
+  
 * **Flight Controller Evolution:**
   * **Version 1:** Initial proof-of-concept testing was done using an Arduino and jumper wires.
   * **Version 3:** Upgraded to a custom double-layer PCB (View the [KiCad Project Files](./Version_3/KiCadV3)) to integrate the ESP32 and peripherals, eliminating fragile wiring and reducing electrical noise.
@@ -23,8 +29,7 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
   <img width="488" height="682" alt="image" src="https://github.com/user-attachments/assets/547577a7-10a6-4643-bf57-f2cb0859f740" />
 
 
-* **Microcontroller:** ESP32.
-* **Sensors:** Onboard MPU6050 IMU for 6-axis spatial tracking.
+
 
 **Frame Design & Manufacturing** 
 *(Below: The original CAD model showcasing the structural assembly, followed by the final 3D-printed physical frame.)*
