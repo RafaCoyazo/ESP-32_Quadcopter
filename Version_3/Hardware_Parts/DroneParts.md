@@ -1,7 +1,15 @@
 # Drone Hardware: Bill of Materials (BOM)
 
-Below is the complete list of off-the-shelf components used in the Version 3 quadcopter build and the custom ground controller.
+Below is the complete list of components required for the Version 3 quadcopter build and the custom ground controller, including both off-the-shelf electronics and custom-manufactured parts.
 
+## Custom Manufactured Parts
+| Component | Specification / Origin | Quantity | Notes |
+| :--- | :--- | :--- | :--- |
+| **Flight Controller Board** | Custom Double-Layer PCB | 1 | Routed in KiCad. (View [KiCad Project Files](../KiCadV3)) |
+| **Quadcopter Frame** | Custom FDM 3D Print | 1 | Modeled in SolidWorks and Fusion 360. Includes arms, top plate, and undercarriage. (View [CAD Files](../CadFilesV3)) |
+| **Mounting Hardware** | Custom FDM 3D Print | As needed | Slicer-tuned for mechanical press-fit tolerances to secure the MPU6050 and PDB. |
+
+## Off-The-Shelf Electronics
 | Component | Specification / Model | Quantity | Notes |
 | :--- | :--- | :--- | :--- |
 | **Microcontroller** | ESP-WROOM-32 ESP32 Development Board | 2 | 2.4GHz Dual-Core WiFi/Bluetooth. (1 for the flight controller, 1 for the remote controller) |
