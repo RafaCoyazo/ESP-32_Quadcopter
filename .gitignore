@@ -1,10 +1,9 @@
-# KiCad backups and cache
-*.bak
-*.tmp
-*.kicad_prl
-sym-lib-table-bak
+# Ignore KiCad lock files
+*.lck
 
-# OS / editor junk
-.DS_Store
-Thumbs.db
-__pycache__/
+# Ignore Gerber manufacturing outputs
+GerbersDrone/
+Gerbers/
+
+# Ignore VS Code local history extensions
+.history/*.lck
