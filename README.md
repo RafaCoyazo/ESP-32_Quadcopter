@@ -27,7 +27,7 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
   * **Version 3:** Redigned custom double-layer PCB (View the [KiCad Project Files](./Version_3/KiCadV3)) to integrate the ESP32 and peripherals, wiring and reduce electrical noise.
  * **Schematic Design**
 *(Below: The wiring schematic integrating the ESP32 microcontroller, MPU6050 IMU, and peripheral modules.)*
-  * <img width="780" height="595" alt="image" src="https://github.com/user-attachments/assets/aba6ac5e-01d4-4533-a27e-a9dbf1184d4b" />
+  <img width="780" height="595" alt="image" src="https://github.com/user-attachments/assets/aba6ac5e-01d4-4533-a27e-a9dbf1184d4b" />
   <img width="488" height="682" alt="image" src="https://github.com/user-attachments/assets/547577a7-10a6-4643-bf57-f2cb0859f740" />
 
 
