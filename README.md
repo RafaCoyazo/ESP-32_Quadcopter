@@ -40,9 +40,12 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
 rplace with image]
 
 
-## Software Stack
-* **Language:** Embedded C++.
-* **Flight Logic:** Custom-written PID control loops to process IMU data and calculate real-time motor compensation. 
+## Software 
+
+* **Language & Codebase Evolution:**
+  * **V1 & V2:** Arduino / C++ (View [Version 1 Code](./Version_1) and [Version 2 Code](./Version_2)).
+  * **V3:** Embedded C++ (View [Version 3 Code](./Version_3/CodeV3)).
+* **Flight Logic:** Custom-written PID control loops to process IMU data and calculate real-time motor compensation.
 * **Communication:** I2C protocol for reading sensor telemetry and PWM signal generation for the ESCs.
 
 ## Project Media
