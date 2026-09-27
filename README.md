@@ -11,3 +11,17 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
 
 * Swapped the rear ESCs to rule out faulty hardware; the RPM deficit persisted.
 * The isolated problem likely lies within the firmware's motor mixing logic, a bug in the PWM signal generation routed to the rear pins, or an uncompensated center of gravity on the 3D-printed frame.
+
+## Hardware & Design
+* **Flight Controller:** Custom double-layer PCB routed in KiCad to integrate the microcontroller and peripherals.
+* **Microcontroller:** ESP32.
+* **Sensors:** Onboard MPU6050 IMU for 6-axis spatial tracking.
+* **Frame:** Custom symmetrical quadcopter frame modeled in CAD and 3D printed.
+
+## Software Stack
+* **Language:** Embedded C++.
+* **Flight Logic:** Custom-written PID control loops to process IMU data and calculate real-time motor compensation. 
+* **Communication:** I2C protocol for reading sensor telemetry and PWM signal generation for the ESCs.
+
+## Project Media
+*(Note to self: Upload a photo of the completed drone, a screenshot of the KiCad PCB layout, and a render of the CAD frame here!)*
