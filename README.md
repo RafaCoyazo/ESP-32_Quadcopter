@@ -19,7 +19,6 @@ The physical build and custom PCB are complete, and the ESP32 successfully inter
 | Component | Description |
 | :--- | :--- |
 | **Microcontroller Evolution** | **V1 & V2:** Arduino (View [Version 1 Details](./Version_1) and [Version 2 Details](./Version_2))
-| :--- | :--- |
 |**Version 3**| **V3 Details of the Hardware:** [Version 3 Details](./Version_3)
   
 * **Flight Controller Evolution:**
