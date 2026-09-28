@@ -6,7 +6,7 @@ Version 2 was designed to resolve the wireless link drops and signal instability
 ## Initial Problem Statement and Hypotheses
 During testing on Version 1, the flight controller failed to establish a stable wireless connection between the Arduino Nano and the initial 2.4 GHz NRF24L01+ radio module. 
 
-Primary Hypothesis: High jumper wire impedance, breadboard contact resistance, and unshielded flying leads were introducing severe electromagnetic interference (EMI) and signal degradation into the SPI bus lines, preventing proper module initialization.
+Primary Hypothesis: High jumper wire impedance, breadboard contact resistance, and causing signal degradation into the SPI bus lines, preventing proper module initialization.
 ## Experimental Iterations and Diagnostics
 To test this hypothesis and systematically isolate the failure, so I made a custom PCB and tested across two transceiver configurations:
 
@@ -16,14 +16,14 @@ Designed and fabricated a custom double-layer flight controller PCB in KiCad to 
 Result: Eliminating the long wires via the custom PCB did not resolve the connection failure, proving that signal path length and breadboard noise were not the primary root cause.
 
 3. Transceiver Module Swap (CC1101 on original PCB Layout)
-Using the same custom PCB design, the NRF24L01+ module was replaced with a CC1101 multi-band wireless module equipped with an external SMA antenna to test if switching radio architecture and frequency bands would establish a link.
-Result: The CC1101 module on the custom PCB also failed to achieve reliable communication, confirming a deeper architectural bottleneck between the 8-bit microcontroller and external SPI transceivers during flight hardware execution.
+Using the same custom PCB design, the NRF24L01+ module was replaced with a CC1101 multi-band wireless module equipped with an external SMA antenna to test if switching radio architecture and frequency bands would establish a connection.
+Result: The CC1101 module on the custom PCB also failed to achieve reliable communication, meaning there was another cause for this problem.
 
 ## Root Cause Breakdown
 After these hardware iterations across breadboards and custom PCBs, three core problems were found:
 
 A. Microcontroller Processing and SPI Overhead
-The 8-bit ATmega328P (16 MHz single-core) microcontroller on the Arduino Nano lacked the processing bandwidth to reliably manage low-level SPI transceiver state machines while simultaneously executing high-frequency MPU6050 IMU reads, PID calculations, and ESC PWM updates.
+The ATmega328P (16 MHz single-core) microcontroller on the Arduino Nano lacked the processing bandwidth to reliably manage low-level SPI transceiver state machines while simultaneously executing high-frequency MPU6050 IMU reads, PID calculations, and ESC PWM updates.
 
 B. SPI Bus Sensitivity and Driver Instability
 External SPI radio modules require heavy software polling and strict timing buffers. Power ripple from motor draws or minor bus timing delays caused the SPI driver to hang, freezing communication entirely regardless of whether wires or copper PCB traces were used.
