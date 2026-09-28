@@ -49,4 +49,23 @@ rplace with image]
 * **Communication:** I2C protocol for reading sensor telemetry and PWM signal generation for the ESCs.
 
 ## Project Media
-*(Note to self: Upload a photo of the completed drone, a screenshot of the KiCad PCB layout, and a render of the CAD frame here!)*
+*(Note to self: Upload a photo of the completed drone and video)*
+
+## Takeoff Dynamics & Motor Imbalance Diagnostics
+
+During takeoff testing, the aircraft experienced a severe pitch imbalance where the rear motors visibly and physically generated significantly lower RPM and thrust compared to the front motors, preventing vertical liftoff.
+
+### Diagnosed Causes & Experimental Troubleshooting:
+
+1. **Power Supply & Input Voltage Verification:**
+   * **Action:** Measured the primary voltage supply lines under load to check for power starvation or voltage drops to the rear power distribution traces.
+   * **Result:** Confirmed that the power supply unit consistently delivers 12V across all board rails and ESC power feeds. Power delivery was ruled out as the root cause.
+
+2. **ESC Timing, Calibration & Hardware Swaps:**
+   * **Hypothesis:** Because four individual ESCs are used rather than an integrated 4-in-1 board, timing drift or throttle calibration offsets could cause rotational speed discrepancies between channels.
+   * **Action:** Replaced the rear Electronic Speed Controllers with brand-new units to test for hardware degradation and calibration drift.
+   * **Result:** Installing new ESCs slightly increased the RPM of one rear motor, but the total thrust was still insufficient to equalize the outputs. This confirms that while minor ESC variances exist, the main bottleneck is not faulty ESC hardware.
+
+3. **Firmware Pitch Control Loops & Sensor Isolation:**
+   * **Action:** To test if the MPU6050 IMU feedback loop was falsely commanding lower duty cycles to the rear channels, firmware was modified to temporarily isolate and disable active pitch compensation.
+   * **Result:** Testing is currently ongoing to evaluate raw PWM output signal scaling, timer channel allocations on the ESP32 pins, and pitch PID loop behavior.
